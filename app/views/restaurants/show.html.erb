@@ -3,4 +3,9 @@
   <p>
     This restaurant is located at: <%= @restaurant.address %> and it is a <%= @restaurant.category %> restaurant
   </p>
+  <p><% @restaurant.reviews.each do |review|%></p>
+  <%= review.content %>
+  <p>Rating: <%= review.rating %></p>
+  <% end %>
+  <%# reviews is an array, iterate through it%>
 </div>
